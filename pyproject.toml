@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "gGN"
+version = "0.1.0"
+description = "Neural network for learning to represent nodes in graphs as low-rank Gaussian distributions."
+authors = ["Null <blindcosmos@infinity.corner>"]
+
+[tool.poetry.dependencies]
+python = "~3.7"
+scipy = '~1.7.0'
+torch = '^1.10.2'
+
+[tool.poetry.scripts]
+gGN = "ggn.cli:ggn"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
