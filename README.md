@@ -24,8 +24,8 @@ and has the following packages as main dependencies:
 * [SciPy](https://scipy.org/) 1.7
 
 These packages are automatically downloaded and installed following the
-instructions below. However, you use the Jupyter notebooks available
-[below](#notebooks) to use gGN directly on the Google cloud.
+instructions below. However, you can use the Jupyter notebooks available
+[below](#notebooks) to execute gGN directly on the Google cloud.
 
 ## Installation
 
