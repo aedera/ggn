@@ -561,11 +561,15 @@ technical details to use gGN.
 
   <tr>
   <td  rowspan=2>Training</td>
-  <td align ="left">Build Low-rank Gaussian embeddings for a toy graph</td>
+  <td align ="left">Learn low-rank Gaussian embeddings for a toy graph</td>
   <td><a href="https://colab.research.google.com/github/blindcosmos/ggn/blob/main/nbs/02-toy-graphs.ipynb">Link</a></td>
   </tr>
   <tr>
-  <td align ="left">Build low-rank Gaussian embeddings for the GO</td>
+  <td align ="left">Load gGN on Python to learn low-rank Gaussian embeddings</td>
+  <td><a href="https://colab.research.google.com/github/blindcosmos/ggn/blob/main/nbs/06-using-gGN-on-Python.ipynb">Link</a></td>
+  </tr>
+  <tr>
+  <td align ="left">Learn low-rank Gaussian embeddings for the GO</td>
   <td><a href="https://colab.research.google.com/github/blindcosmos/ggn/blob/main/nbs/03-building-Gaussian-embeddings-from-scratch.ipynb">Link</a></td>
   </tr>
 
