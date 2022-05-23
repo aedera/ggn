@@ -1,4 +1,5 @@
 import sys
+import os
 
 import torch
 import numpy as np
@@ -25,6 +26,12 @@ def ggn():
 
     if len(sys.argv) > 8:
         saveall  = 1
+
+    # load predefined
+    if sp_fin == "TOYGRAPH":
+        # read predefined graph
+        basename = os.path.dirname(__file__)
+        sp_fin = os.path.join(basename, 'toy.npz')
 
     # read sparse matrix with the shortest path lengths
     spmat   = scipy.sparse.load_npz(sp_fin)
