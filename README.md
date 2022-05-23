@@ -111,7 +111,8 @@ The arguments are
 7. `prefix`:   Prefix included in the names of the npy files used to store the built embeddings.
 
 The following line shows how to use this utility to learn 2-dimensional node
-embeddings for an predefined, exemplary toy graph (which is also analyzed in this [notebook](https://colab.research.google.com/github/blindcosmos/ggn/blob/main/nbs/02-toy-graphs.ipynb)):
+embeddings from a toy graph (which is also analyzed in this
+[notebook](https://colab.research.google.com/github/blindcosmos/ggn/blob/main/nbs/02-toy-graphs.ipynb)):
 
 ```
 $ gGN TOYGRAPH 2 2 1000 10 0 output
