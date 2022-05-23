@@ -149,7 +149,7 @@ learned low-rank Gaussian embeddings:
 </p>
 
 In these matrices, the rows are indexing nodes while the number of columns is
-given by the embedding dimensionality (n). Each cell of the matrix P
+given by the embedding dimensionality (d). Each cell of the matrix P
 additionally has a depth equal to the rank (r).
 
 Below, there is an example on how to use the `scipy` package to transform
