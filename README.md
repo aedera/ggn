@@ -23,12 +23,12 @@ and has the following packages as main dependencies:
 * [PyTorch](https://pytorch.org/) 1.10.2
 * [SciPy](https://scipy.org/) 1.7
 
-These packages are automatically downloaded and installed following the
+These packages are automatically downloaded and installed when following the
 instructions below.
 
-**Note:** Alternatively, gGN can be executed, without local installation,
-  directly on the Google cloud by means of the Jupyter notebooks available
-  [below](#notebooks).
+**Note:** Alternatively, gGN can be directly executed, without local
+   installation, on the Google cloud by means of the Jupyter notebooks
+   available [below](#notebooks).
 
 ## Installation
 
@@ -94,7 +94,7 @@ covms = embedder.covm # low-rank factors
 ### Command line
 
 Once installed, gGN offers a command line utility to build your own node
-embeddings for a given graph. To call this utility, use the following line
+embeddings from a given graph. To call this utility, use the following line
 
 ```
 $ gGN [npz_fin] [emb_dim] [covm] [n_epochs] [batch_sz] [cuda] [prefix]
@@ -137,8 +137,8 @@ examples on how to construct such a matrix.
 
 ### Embedding format
 
-The output of the command line utility are three `npy` files that contain the
-learned low-rank Gaussian embeddings:
+Embeddings are stored as three `npy` files that contain the learned low-rank
+Gaussian embeddings:
 
 * means (&#956;),
 * diagonal matrices (D) and
@@ -148,13 +148,13 @@ learned low-rank Gaussian embeddings:
   <img src="assets/embedding_format.jpg" alt="gGN embedding format" height="300""/>
 </p>
 
-In these matrices, the rows are indexing nodes while the number of columns is
-given by the embedding dimensionality (d). Each cell of the matrix P
-additionally has a depth equal to the rank (r).
+In these matrices, the rows index nodes while the number of columns indicates
+the embedding dimensionality (d). Each cell of the matrix P additionally has a
+depth equal to the rank (r).
 
 Below, there is an example on how to use the `scipy` package to transform
-these three matrices into Gaussian distributions. More examples are shown in
-the section [Notebooks](#notebooks).
+these three matrices into Gaussian distributions. More examples are shown
+[here](#notebooks).
 
 ```python
 import numpy as np
@@ -185,8 +185,8 @@ for mu_i, D_i, P_i in zip(means, diags, covms):
 
 To compare two nodes, the
 [KL divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence)
-between their corresponding Gaussian distributions is computed. The following
-example shows how to calculate it.
+between their corresponding Gaussian distributions is computed, as shown
+below.
 
 ```python
 import numpy as np
@@ -214,7 +214,7 @@ kls = ggn.distances.lowrank_KL(
 
 The entropy of the low-rank Gaussian embeddings can be calculated, for
 example, by first transforming them into Gaussian distributions using the
-SciPy package, and then
+SciPy package (i.e., as shown above), and then
 
 ```python
 mvns # list of Gaussian distributions ([scipy.stats.multivariate_normal])
@@ -594,8 +594,9 @@ technical details to use gGN.
 The figure below shows that the use of the proposed low-rank approximation
 reduces significantly the loss values in comparison to the spherical and
 diagonal approximations, which are commonly used by existing node
-representations. Here, the lower the loss values are, the better the node
-embeddings are capturing graph features.
+representations. Here, the lower the loss values are, the better graph
+features are encoded by the node embeddings. These results show the modeling
+benefits of using the low-rank representation.
 
 <p align="center">
   <img src="assets/Fig2_loss_analysis.jpg" alt="gGN loss curves" height="300"/>
@@ -604,7 +605,7 @@ embeddings are capturing graph features.
 The following table shows the performance of the low-rank Gaussian embeddings
 in a semantic similarity task on the GO. Here the aim was to discriminate
 between pairs of nodes in which the first node is either an ancestor or a
-descendant of the paired node. For a systematic comparison across all pairs,
+descendant of the other node. For a systematic comparison across all pairs,
 the
 [Davies-Bouldin index](https://en.wikipedia.org/wiki/Davies%E2%80%93Bouldin_index)
 was used to measure the level of overlap between the semantic similarities of
