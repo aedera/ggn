@@ -24,8 +24,11 @@ and has the following packages as main dependencies:
 * [SciPy](https://scipy.org/) 1.7
 
 These packages are automatically downloaded and installed following the
-instructions below. However, you can use the Jupyter notebooks available
-[below](#notebooks) to execute gGN directly on the Google cloud.
+instructions below.
+
+**Note:** Alternatively, gGN can be executed, without local installation,
+  directly on the Google cloud by means of the Jupyter notebooks available
+  [below](#notebooks).
 
 ## Installation
 
@@ -107,8 +110,16 @@ The arguments are
 6. `cuda`:     Use cuda: 0/no, 1/yes.
 7. `prefix`:   Prefix included in the names of the npy files used to store the built embeddings.
 
-This utility outputs the Gaussian embeddings as `npy` files whose format is
-further explained below.
+The following line shows how to use this utility to learn 2-dimensional node
+embeddings for an predefined, exemplary toy graph (which is also analyzed in this [notebook](https://colab.research.google.com/github/blindcosmos/ggn/blob/main/nbs/02-toy-graphs.ipynb)):
+
+```
+$ gGN TOYGRAPH 2 2 1000 10 0 output
+```
+
+This line outputs the low-rank Gaussian embeddings as `npy` files whose format
+is further explained below.
+
 
 ### Input format
 
