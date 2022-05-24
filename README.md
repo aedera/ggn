@@ -196,22 +196,24 @@ below.
 ```python
 import numpy as np
 import torch
+import ggn
 import ggn.distances
 
-# read embeddings
-means = np.load('prefix_mean.npy') # shape (n, d)
-diags = np.load('prefix_diag.npy') # shape (n, d)
-covms = np.load('prefix_covm.npy') # shape (n, d, r)
+
+# load pre-learned gGN embeddings for a toy graph
+means = np.load(ggn.TOYGRAPH_means)
+diags = np.load(ggn.TOYGRAPH_diags)
+covms = np.load(ggn.TOYGRAPH_covms)
 
 # batch of indexes of distributions
-idxs = np.array([10, 150]) # idx < n for idx in idxs
+idxs = np.array([1, 2, 3])
 
 # calculate KL between each distribution in idxs and all the rest
 kls = ggn.distances.lowrank_KL(
   torch.from_numpy(idxs),
-  torch.from_numpy(mean),
-  torch.from_numpy(diag),
-  torch.from_numpy(covm),
+  torch.from_numpy(means),
+  torch.from_numpy(diags),
+  torch.from_numpy(covms),
 ) # shape (idxs.shape[0], n)
 ```
 
