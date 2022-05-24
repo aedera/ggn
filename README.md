@@ -60,10 +60,13 @@ gGN can be imported in a Python code.
 ```python
 import scipy.sparse
 import torch
+import ggn
 from ggn.models import LowRankEmbedder
 from ggn.utils import MyCollator, fit
 
-spmat    = scipy.sparse.load_npz(sp_fin) # load sparse matrix
+# load a pre-built matrix of shortest path lengths calculated from a toy graph
+spmat    = scipy.sparse.load_npz(ggn.TOYGRAPH)
+
 batch_sz = 128                           # batch size
 dim      = 10                            # embedding dimension
 rank     = 4                             # rank of embeddings
