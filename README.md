@@ -163,12 +163,14 @@ these three matrices into Gaussian distributions. More examples are shown
 import numpy as np
 from scipy.stats import multivariate_normal as mvnormal
 
-# read embeddings
-means = np.load('prefix_mean.npy')
-diags = np.load('prefix_diag.npy')
-covms = np.load('prefix_covm.npy')
+import ggn
 
-# Instantiate Gaussian distributions
+# load pre-learned gGN embeddings for a toy graph
+means = np.load(ggn.TOYGRAPH_means)
+diags = np.load(ggn.TOYGRAPH_diags)
+covms = np.load(ggn.TOYGRAPH_covms)
+
+# Instantiate Gaussian distributions from embeddings
 mvns = [] # list of Gaussian distributions
 
 # loop over each node
