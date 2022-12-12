@@ -1,4 +1,4 @@
-# gGN: learning to represent graph nodes as low-rank distributions
+# gGN: learning low-rank Gaussian distributions for representing nodes in knowledge graphs
 
 This repository is the official implementation of gGN: a novel neural network
 to learn embeddings of nodes in graphs. Unlike existing approaches, gGN is
