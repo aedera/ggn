@@ -1,9 +1,9 @@
 # gGN: learning low-rank Gaussian distributions for representing nodes in knowledge graphs
 
 This repository is the official implementation of gGN: a novel neural network
-to learn embeddings of nodes in graphs. Unlike existing approaches, gGN is
-able to capture relationships between nodes with high accuracy by using
-low-rank Gaussian distributions.
+to learn node embeddings from knolwedge graphs. Unlike existing approaches, gGN is
+able to capture hierarchical and asymmetric relationships between nodes with high accuracy by using
+Gaussian distributions whose covariance matrices are estimated by using a low-rank approximation.
 
 <p align="center">
   <img src="assets/2d_embs.jpg" alt="2D Gaussian embeddings" height="200"/>
