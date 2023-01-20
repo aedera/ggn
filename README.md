@@ -48,7 +48,7 @@ conda activate gGN
 Now, install the latest version of gGN directly from the sources.
 
 ```
-pip install -U "ggn @ git+https://github.com/blindcosmos/ggn.git"
+pip install -U "ggn @ git+https://github.com/aedera/ggn.git"
 ```
 
 ## Training
