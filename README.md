@@ -1,4 +1,4 @@
-# gGN: representing nodes in knowledge graphs as low-rank Gaussian distributions
+# gGN: representing the Gene Ontology as low-rank Gaussian distributions
 
 This repository is the official implementation of gGN: a novel neural network
 to learn node embeddings from knolwedge graphs. Unlike existing approaches, gGN is
