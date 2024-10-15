@@ -5,7 +5,7 @@ to learn node embeddings from knolwedge graphs. Unlike existing approaches, gGN 
 able to capture hierarchical and asymmetric relationships between nodes with high accuracy by using
 Gaussian distributions whose covariance matrices are estimated by using a low-rank approximation.
 
-[Access paper](https://www.sciencedirect.com/science/article/pii/S0010482524013192?via%3Dihub).
+[Access paper](https://doi.org/10.1016/j.compbiomed.2024.109234).
 
 
 <p align="center">
